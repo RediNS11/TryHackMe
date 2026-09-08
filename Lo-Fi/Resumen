@@ -1,0 +1,7 @@
+Identificación de la superficie de ataque: Descubrimiento del servidor web activo en la IP objetivo (10.65.162.162) mediante la inspección del servicio en el puerto 80.
+
+Identificación de vulnerabilidades: Análisis de la estructura HTML con curl para detectar el parámetro ?page= en la sección de navegación, expuesto a Inclusión Local de Archivos (LFI) por falta de sanitización.
+
+Explotación: Ejecución de Path Traversal mediante peticiones HTTP mandando secuencias de salto de directorio (../../../../../../flag.txt) para escapar de la raíz web hacia el directorio raíz del sistema (/).
+
+Extracción: Lectura del archivo del sistema desde la respuesta HTTP y obtención directa de la clave objetivo (flag{e4478e0eab69bd642b8238765dcb7d18}).
